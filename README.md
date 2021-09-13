@@ -30,7 +30,18 @@ DARK_MUTED_MODE(暗亮度低饱和类)
 每种颜色目标模式都有自己独特的Target参数，也就是S和L越靠近这个Target值得分越高，最终再综合像素个数的得分，得分最高的颜色也就是我们在对应模式下要提取的目标颜色。
 
 ```
-Tips:推荐颜色的逻辑是优先选VIBRANT_MODE下的颜色，如果该模式下没有识别出目标颜色，则会按照MUTE_MODE------LIGHT_VIRANT_MODE ------LIGHT_MUTE_MODE------DARK_VIBRANT_MODE------DARK_MUTE_MODE的继承顺序进行传递。
+Tips:推荐颜色的逻辑是优先选VIBRANT_MODE下的颜色
+如果该模式下没有识别出目标颜色，则会按照
+MUTE_MODE
+->
+LIGHT_VIRANT_MODE
+->
+LIGHT_MUTE_MODE
+->
+DARK_VIBRANT_MODE
+->
+DARK_MUTE_MODE
+的继承顺序进行传递。
 ```
 
 ## 0.1 TODO
